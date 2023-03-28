@@ -16,7 +16,7 @@
   </div>
   <!--overlay div-->
   <div id="overlay" onclick="off()">
-    <div id="clearlay" onclick="play()"></div>
+    <div id="overlay" onclick="play()"></div>
     <div id="text">Happy 2nd Birthday!</div>
   </div>
   <!--button group-->
@@ -644,19 +644,8 @@ img {vertical-align: middle;}
     right: 0;
     bottom: 0;
     background-color:white;
-    z-index: 2;
+    z-index: 1;
     cursor: pointer;
-  }
-  #clearlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 20;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
   }
   #text{
       background-color: white ;
@@ -674,6 +663,7 @@ img {vertical-align: middle;}
       color: black;
       transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
+      z-index: 1;
   }
   </style>
 </html> 
