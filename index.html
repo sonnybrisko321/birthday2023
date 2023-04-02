@@ -370,10 +370,110 @@
       <span4 class="close4">&times;</span4>
       <h2>Happy Birthday Taichou!</h2>
     </div>
-    <div class="modal-body4">
-      <p>Thank you to all the Briskadets that joined and helped give support for this
-        project. Special thanks to VSF Headquarters for allowing us to use their
-        platform to host this project. It would not have been possible without them.</p>
+    <div class="slideshow-container4">
+      <div class="my4Slides fade">
+      <img src="Cookbook/msg1.png" style="width: 100%">
+      </div>
+      
+      <div class="my4Slides fade">
+      <img src="Cookbook/msg2.png" style="width: 100%">
+      </div>
+      
+      <div class="my4Slides fade">
+      <img src="Cookbook/msg3.png" style="width: 100%">
+      </div>
+
+      <div class="my4Slides fade">
+          <img src="Cookbook/msg4.png" style="width: 100%">
+      </div>
+
+      <div class="my4Slides fade">
+        <img src="Cookbook/msg5.png" style="width: 100%">
+        </div>
+        
+        <div class="my4Slides fade">
+        <img src="Cookbook/msg6.png" style="width: 100%">
+        </div>
+
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg7.png" style="width: 100%">
+      </div>
+        <div class="my4Slides fade">
+            <img src="Cookbook/msg8.png" style="width: 100%">
+        </div>
+                 
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg9.png" style="width: 100%">
+      </div>
+              
+        <div class="my4Slides fade">
+            <img src="Cookbook/msg10.png" style="width: 100%">
+        </div>
+                              
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg11.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg12.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg13.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg14.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg15.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg16.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg17.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg18.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg19.png" style="width: 100%">
+      </div>
+                            
+        <div class="my4Slides fade">
+          <img src="Cookbook/msg20.png" style="width: 100%">
+      </div>
+      <br>
+      <div style="text-align:center">
+      <span class="dot4" onclick="current4Slide(1)"></span> 
+      <span class="dot4" onclick="current4Slide(2)"></span> 
+      <span class="dot4" onclick="current4Slide(3)"></span>
+      <span class="dot4" onclick="current4Slide(4)"></span>
+      <span class="dot4" onclick="current4Slide(5)"></span> 
+      <span class="dot4" onclick="current4Slide(6)"></span> 
+      <span class="dot4" onclick="current4Slide(7)"></span>
+      <span class="dot4" onclick="current4Slide(8)"></span>
+      <span class="dot4" onclick="current4Slide(9)"></span> 
+      <span class="dot4" onclick="current4Slide(10)"></span> 
+      <span class="dot4" onclick="current4Slide(11)"></span>
+      <span class="dot4" onclick="current4Slide(12)"></span>
+      <span class="dot4" onclick="current4Slide(13)"></span> 
+      <span class="dot4" onclick="current4Slide(14)"></span> 
+      <span class="dot4" onclick="current4Slide(15)"></span>
+      <span class="dot4" onclick="current4Slide(16)"></span> 
+      <span class="dot4" onclick="current4Slide(17)"></span> 
+      <span class="dot4" onclick="current4Slide(18)"></span> 
+      <span class="dot4" onclick="current4Slide(19)"></span>
+      <span class="dot4" onclick="current4Slide(20)"></span>  
+      </div>
+      <a class="prev4" onclick="plus4Slides(-1)">❮</a>
+      <a class="next4" onclick="plus4Slides(1)">❯</a>
     </div>
   </div>
 </div>
@@ -541,6 +641,33 @@ function plus2Slides(n) {
     }
     let slide2Index = 1;
     show2Slides(slide2Index);
+
+//Message Gallery
+function plus4Slides(n) {
+    show4Slides(slide4Index += n);
+    }
+
+    function current4Slide(n) {
+    show4Slides(slide4Index = n);
+    }
+
+    function show4Slides(n) {
+    let i;
+    let slides = document.getElementsByClassName("my4Slides");
+    let dots4 = document.getElementsByClassName("dot4");
+    if (n > slides.length) {slide4Index = 1}    
+    if (n < 1) {slide4Index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots4.length; i++) {
+    dots4[i].className = dots4[i].className.replace(" active4", "");
+   }
+    slides[slide4Index-1].style.display = "block";  
+    dots4[slide4Index-1].className += " active4";
+    }
+    let slide4Index = 1;
+    show4Slides(slide4Index);
 
 //Artist Gallery
 let slide3Index = 0;
@@ -976,7 +1103,7 @@ cursor: pointer;
 .slideshow-container3 {
 object-fit: contain;
 position: absolute;
-transform: translateX(50%);
+margin-left: 340px;
 }
 .dot3 {
   height: 15px;
@@ -999,7 +1126,7 @@ transform: translateX(50%);
 .modal4 {
 display: none; /* Hidden by default */
 position: fixed; /* Stay in place */
-padding-top: 100px; /* Location of the box */
+padding-top: 20px; /* Location of the box */
 left: 0;
 top: 0;
 width: calc(100vw - 1px);
@@ -1010,13 +1137,11 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content4 {
-position: relative;
-width: 750px;
-height: 550px;
+width: 1350px;
+height: 1050px;
 margin: 0 auto;
-background: #fbeff2;
+background: #313131;
 border-radius: 12px;
-overflow: hidden;
 border: 3px solid #fffb00;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 -webkit-animation-name: animatetop;
@@ -1030,18 +1155,6 @@ font-family: 'Lucida Grange', monospace;
 font-size: 20px;
 padding: 2px 10px;
 background-color: #e5e91a;
-color: white;
-}
-
-.modal-body4 {
-font-family: 'Lucida Grange', monospace;
-font-size: 25px;
-padding: 2px 16px;
-}
-
-.modal-footer4 {
-padding: 2px 16px;
-background-color: #dedc54;
 color: white;
 }
 
@@ -1061,6 +1174,57 @@ text-decoration: none;
 cursor: pointer;
 }
 
+.slideshow-container4 {
+object-fit: contain;
+position: absolute;
+margin-left: 35px;
+}
+
+.dot4 {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active4 {
+  background-color: #eeff02;
+}
+.active4, .dot4:hover {
+  background-color: #eeff02;
+}
+.prev4, .next4 {
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: rgb(25, 27, 27);
+font-weight: bold;
+font-size: 20px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+background-color: #f0ebeb;
+}
+
+.next4 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev4 {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev4:hover, .next4:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 /*Credits Modal*/
 .modal5 {
 display: none; /* Hidden by default */
