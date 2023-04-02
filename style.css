@@ -1,6 +1,5 @@
 /*main welcome page*/
 html{
-  cursor: url(cursor.png) auto;
   height: 100%;
   position: relative;
   background-image:linear-gradient(#c7c1c1, #c7c1c1, #c7c1c1, #c7c1c1);
