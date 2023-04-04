@@ -31,13 +31,13 @@
           <a class="enter" onclick="plusSlides(1);play()">❯</a>
       </div>
       <div class="mySlides fade">
+        <img src="bimg.png" class="comic-style1">
+        <div class="music-player">
+        <audio id="audio" controls loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        </audio>
+        </div>
           <div class="main">
-              <img src="bimg.png" class="comic-style1">
-              <div class="music-player">
-              <audio id="audio" controls loop>
-              <source src="bgm.mp3" type="audio/mpeg">
-              </audio>
-              </div>
               <div class="btn-group">
                   <button id="welcomeBtn"></button>
                   <button id="giftBtn"></button>
@@ -599,12 +599,15 @@ display: block;
 cursor: url(cursor.png), auto;
 }
 
+
 .main{
-width: 100vh;
-width: 100vh;
-position: fixed;
-top: 0;
-left: 0;
+max-width: 130px;
+max-height: 900px;
+width: 100%;
+position: absolute;
+top: 50%;
+margin-left: 30px;
+transform: translateY(-50%);
 }
 
 #overlay {
@@ -623,15 +626,15 @@ z-index: 2;
 
 /*Buttons group*/
 .btn-group button {
+max-width: 140px;
+max-height: 900px;
 border: 2px solid #dbcda4;
-width: 70%;
-top: 50%;
-left: 0;
-margin-top: 15px;
-margin-left: 25PX;
+width: 100%;
+margin: 0 auto;
+margin-top: 10PX;
 z-index: 1;
-display: block;
 cursor: url(cursor.png), auto;
+display: block;
 }
 
 .btn-group button:not(:last-child) {
@@ -644,44 +647,44 @@ opacity:0.5;
 }
 
 #welcomeBtn{
-  background:url(btn1.PNG) no-repeat;
+  background:url(btn1.png) no-repeat;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius:15px;
-  width:125px;
-  height:125px;
+  width:133px;
+  height:133px;
 }
 #giftBtn{
   background:url(btn2.png) no-repeat;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius:15px;
-  width:125px;
-  height:125px;
+  width:133px;
+  height:133px;
 }
 #imgBtn{
   background:url(btn3.png) no-repeat;
   background-color: rgba(255, 255, 255, 0.75);
   background-position: center;
   border-radius:15px;
-  width:125px;
-  height:125px;
+  width:133px;
+  height:133px;
 }
 #msgBtn{
-  background:url(btn4.PNG) no-repeat;
+  background:url(btn4.png) no-repeat;
   background-color: rgba(255, 255, 255, 0.75);
   background-position: center;
   border-radius:15px;
-  width:125px;
-  height:125px;
+  width:133px;
+  height:133px;
 }
 #creditBtn{
-  background:url(btn5.PNG) no-repeat;
+  background:url(btn5.png) no-repeat;
   background-color: rgba(255, 255, 255, 0.75);
   background-position: center;
   border-radius:15px;
-  width:125px;
-  height:125px;
+  width:133px;
+  height:133px;
 }
 
 /*Intro slideshow*/
@@ -693,7 +696,6 @@ text-align: center;
 z-index: 1;
 width: calc(100%-15px);
 height: calc(100%-15px);
-overflow: auto;
 }
 
 .comic-style{
