@@ -254,7 +254,7 @@
   <div class="modal-content3">
     <div class="modal-header3">
       <span3 class="close3">&times;</span3>
-      <h2>Artist Gallery</h2>
+      <h2>Art Gallery</h2>
     </div>
     <div class="slideshow-container3">
       <div class="my3Slides fade">
@@ -356,7 +356,6 @@
         <span class="dot3"></span> 
         <span class="dot3"></span> 
         <span class="dot3"></span> 
-        <span class="dot3"></span> 
       </div>
     </div>
   </div>
@@ -422,7 +421,7 @@
         </li>
         </ul>
   </li>
-  <li><strong>Cookbook Credits:</strong><a href="cookbook-credit.png" target="_blank"><img src="cookbook-credit.png" alt="Cookbook Credits" style="width:42px;height:60px;"></a></li>
+  <li><strong>Cookbook Credits:</strong><a href="credits.png" target="_blank"><img src="credits.png" alt="Cookbook Credits" style="width:42px;height:60px;"></a></li>
   <li><strong>Background Music:</strong><a href="https://youtu.be/unPPB8rR1wI" target="_blank">superstar · しゃろう</a></li>
   <li><strong>Website designer:</strong> Yulian</li>
   </ul>
@@ -581,7 +580,7 @@ function show3Slides() {
   }
   slides3[slide3Index-1].style.display = "block";  
   dots3[slide3Index-1].className += " active3";
-  setTimeout(show3Slides, 2000); // Change image every 2 seconds
+  setTimeout(show3Slides, 3000); //
 }
 
   </script>
@@ -848,8 +847,8 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content2 {
-width: 1400px;
-height: 1050px;
+width: 1180px;
+height: 800px;
 margin: 0 auto;
 background: #313131;
 border-radius: 12px;
@@ -862,16 +861,11 @@ animation-duration: 0.4s
 }
 
 .modal-header2 {
+font-size: 15px;
 font-family: 'Lucida Grange', monospace;
 font-size: 20px;
 padding: 2px 10px;
 background-color: #e5e91a;
-color: white;
-}
-
-.modal-footer2 {
-padding: 2px 16px;
-background-color: #dedc54;
 color: white;
 }
 
@@ -895,7 +889,7 @@ cursor: pointer;
 .slideshow-container2 {
 object-fit: contain;
 position: absolute;
-margin-left: 50px;;
+margin-left: 85px;;
 }
 
 .dot {
@@ -910,10 +904,10 @@ transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #eeff02;
+  background-color: #00eeff;
 }
 .active, .dot:hover {
-  background-color: #eeff02;
+  background-color: #00eeff;
 }
 .prev2, .next2 {
 position: absolute;
@@ -960,7 +954,7 @@ background-color: rgba(0,0,0,0.4);
 
 .modal-content3 {
 width: 1080px;
-height: 810px;
+height: 800px;
 margin: 0 auto;
 background: #313131;
 border-radius: 12px;
@@ -1008,8 +1002,8 @@ position: absolute;
 margin-left: 300px;
 }
 .dot3 {
-  height: 12px;
-  width: 12px;
+  height: 13px;
+  width: 13px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
